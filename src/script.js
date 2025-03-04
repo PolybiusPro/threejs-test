@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import * as dat from 'lil-gui';
+//import * as dat from 'lil-gui';
 import { FontLoader } from 'three/addons/loaders/FontLoader.js';
 import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 
@@ -8,7 +8,7 @@ import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
  * Base
  */
 // Debug
-const gui = new dat.GUI();
+// const gui = new dat.GUI();
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl');
@@ -27,7 +27,7 @@ const scene = new THREE.Scene();
  */
 const textureLoader = new THREE.TextureLoader();
 const matcapTexture = textureLoader.load(
-    '/textures/matcaps/neon.png'
+    './textures/matcaps/neon.png'
 );
 
 /**
@@ -35,7 +35,7 @@ const matcapTexture = textureLoader.load(
  */
 const fontLoader = new FontLoader();
 fontLoader.load(
-    '/fonts/Press_Start_2P/Press_Start_2P.typeface.json',
+    './fonts/Press_Start_2P/Press_Start_2P.typeface.json',
     (font) => {
         const textGeometry = new TextGeometry('PolybiusPro', {
             font,
